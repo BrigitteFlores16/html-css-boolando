@@ -1,7 +1,7 @@
 /* #Reset*/
 *{
     box-sizing: border-box;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 /*#header*/
@@ -13,12 +13,11 @@ header {
     color: white;
     align-items: center;
 }
-.logo {
-    font: size 30px;
 
-}
 .logo-boolean {
-    font: size 30px;
+    font: size 200px;
+    width: 100%;
+    height: auto;
     font-weight: bold;
 }
 header nav a {
@@ -29,7 +28,7 @@ header nav a {
 }
 
 
-header nav a:hover {
+header nav:hover {
     text-decoration: underline;
 }
 .img{
@@ -43,15 +42,17 @@ body {
     padding: 0;
     background-color: #f9f9f9;
 }
+   
 /*#product section*/
-.product>.container{
+.product.container{
     display:flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content:space-between;
     gap:20px;
     padding: 20px;
-    grid-template-columns: repeat(3, 1fr);
+    width: 30%; 
+    object-fit: cover;
 }
 
  .product.product-card{
@@ -59,25 +60,36 @@ body {
     padding: 1rem;
   position: relative;
      max-width: 100%;
-    height: auto
-    background-color: white;
-    border: 1px solid
-    padding: 15px;
-    text-align: center;
-    position: relative;
-
-
+    height: auto;
+    background-color:white;
+    border: 1px solid;
+   
+   
  
  /*#debug*/
  background-color: gray;
  min-height: 300px;
 
  }
- .car-imagine{
-    display: flex;
-    justify-content: space-between;
+ .card-image img{
    
+    flex:1;
+    margin:0 10px;
+    text-align: center;
+    max-width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: inline-block;
+    position: relative;
+    justify-content:space-between;
+    width: 100%;
+    object-fit: cover;
+
     
+ }
+ .card-image img :hover {
+    transform: scale(1.05);
+    transition: trasform 0.3s ease;
  }
 
  .product-card.card-description{
@@ -105,6 +117,10 @@ body {
     cursor: pointer;
     font-size: 20px;
     color: black;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 .price.card-description {
     font-size: 16px;
@@ -120,7 +136,7 @@ body {
 }
 
 
-.discount.product-card {
+.discount.card-discount {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -134,4 +150,25 @@ body {
     padding: 5px;
     display: inline-block;
     margin-top: 5px;
+
+}
+.discount.product.container{
+    position: absolute;
+     top: 10px;
+     left: 10px;
+    background-color: red;
+    color: white;
+     
+    
+     
+}
+
+/* # footer*/
+footer {
+    background-color: #333;
+    color: white;
+    text-align: left;
+    padding: 10px 20px;
+   
+    width: 100%;
 }
